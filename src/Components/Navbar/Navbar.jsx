@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 backdrop-blur-lg bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+      <nav className="sticky top-0 z-50 backdrop-blur-lg bg-white/80 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <Link to="/" className="flex items-center">
@@ -44,8 +44,8 @@ const Navbar = () => {
                   to={link.path}
                   className={`relative px-3 py-2 text-sm font-medium transition-colors ${
                     location.pathname === link.path
-                      ? "text-purple-600 dark:text-purple-400"
-                      : "text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400"
+                      ? "text-purple-600"
+                      : "text-slate-700 hover:text-purple-600"
                   }`}
                 >
                   {link.name}
@@ -83,15 +83,15 @@ const Navbar = () => {
 
         {/* Mobile Menu Dropdown */}
         {isOpen && (
-          <div className="md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-4 py-3 space-y-2">
+          <div className="md:hidden bg-white border-t border-slate-200 px-4 py-3 space-y-2">
             {NavLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
                 className={`block px-3 py-2 rounded text-sm font-medium transition-colors ${
                   location.pathname === link.path
-                    ? "text-purple-600 dark:text-purple-400"
-                    : "text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400"
+                    ? "text-purple-600"
+                    : "text-slate-700 hover:text-purple-600"
                 }`}
               >
                 {link.name}

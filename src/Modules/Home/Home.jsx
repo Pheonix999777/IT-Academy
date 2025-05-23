@@ -98,20 +98,20 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-slate-50 dark:from-slate-900 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-slate-50 to-transparent"></div>
       </section>
 
       {/* Features Section */}
-      <section ref={targetRef} className="py-20 bg-slate-50 dark:bg-slate-900">
+      <section ref={targetRef} className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             style={{ opacity, y }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
               Why Choose IT Academy?
             </h2>
-            <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
+            <p className="mt-4 text-lg text-slate-600">
               We provide a comprehensive learning experience designed to help
               you succeed in the tech industry.
             </p>
@@ -126,17 +126,15 @@ const Home = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
-                className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-xl dark:shadow-slate-800/50 border border-slate-100 dark:border-slate-700"
+                className="bg-white rounded-xl p-6 shadow-xl dark:shadow-slate-800/50 border border-slate-100"
               >
-                <div className="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 mb-4">
+                <div className="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600 mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-slate-600 dark:text-slate-400">
-                  {feature.description}
-                </p>
+                <p className="text-slate-600">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -146,13 +144,13 @@ const Home = () => {
       <MentorCarouselSection />
 
       {/* Popular Courses Preview */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-900">
+      <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
               Popular Courses
             </h2>
-            <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
+            <p className="mt-4 text-lg text-slate-600">
               Explore our most in-demand courses designed to help you master the
               skills that employers are looking for.
             </p>
@@ -167,7 +165,7 @@ const Home = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -10 }}
-                className="group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl dark:shadow-slate-800/50 border border-slate-100 dark:border-slate-700"
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-xl border border-slate-100"
               >
                 <div
                   className={`h-48 ${course.image} relative overflow-hidden`}
@@ -175,10 +173,10 @@ const Home = () => {
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors">
                     <img src={course.image} alt={course.title} />
                   </div>
-                  <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm rounded-lg px-3 py-1 text-sm font-medium text-slate-900 dark:text-white">
+                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1 text-sm font-medium text-slate-900 dark:text-white">
                     {course.category}
                   </div>
-                  <div className="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm rounded-lg px-3 py-1 text-sm font-medium text-slate-900 dark:text-white flex items-center">
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1 text-sm font-medium text-slate-900 flex items-center">
                     <span className="text-yellow-500 mr-1">★</span>{" "}
                     {course.rating}
                   </div>
@@ -186,28 +184,28 @@ const Home = () => {
 
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-3">
-                    <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300">
+                    <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-800">
                       {course.level}
                     </span>
                     <span className="text-sm text-slate-600 dark:text-slate-400">
                       {course.weeks} weeks
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                  <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-purple-600 transition-colors">
                     {course.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">
+                  <p className="text-slate-600 mb-4 line-clamp-2">
                     {course.description}
                   </p>
                   <div className="flex justify-between items-center">
-                    <span className="text-lg font-bold text-slate-900 dark:text-white">
+                    <span className="text-lg font-bold text-slate-900">
                       ${course.price}
                     </span>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => handleViewCourse(course)}
-                      className="px-4 py-2 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 font-medium hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors"
+                      className="px-4 py-2 rounded-lg bg-purple-100 text-purple-600 font-medium hover:bg-purple-200 transition-colors"
                     >
                       View Details
                     </motion.button>

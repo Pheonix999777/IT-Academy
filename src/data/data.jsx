@@ -3,6 +3,10 @@ import FullStack from "/src/assets/Images/Full-Stack Web Development.png";
 import DataScience from "/src/assets/Images/Data Science & Machine Learning.png";
 import MobileApp from "/src/assets/Images/Mobile App Development.png";
 import CloudArchitecture from "/src/assets/Images//Cloud Architecture & DevOps.png";
+import Cybersecurity from "/src/assets/Images/Cybersecurity Fundamentals.png";
+import Advanced from "/src/assets/Images/Advanced JavaScript Programming.png";
+import Design from "/src/assets/Images/UIUX Design for Developers.png";
+import Blockchain from "/src/assets/Images/Blockchain Development.png";
 
 export const NavLinks = [
   { name: "Home", path: "/" },
@@ -53,6 +57,15 @@ export const Levels = [
   { id: "beginner", name: "Beginner" },
   { id: "intermediate", name: "Intermediate" },
   { id: "advanced", name: "Advanced" },
+];
+
+export const Specialties = [
+  { id: "all", name: "All Specialties" },
+  { id: "web", name: "Web Development" },
+  { id: "data", name: "Data Science" },
+  { id: "mobile", name: "Mobile Development" },
+  { id: "cloud", name: "Cloud Computing" },
+  { id: "security", name: "Cybersecurity" },
 ];
 
 export const CoursesData = [
@@ -113,7 +126,7 @@ export const CoursesData = [
     title: "Cybersecurity Fundamentals",
     category: "security",
     level: "beginner",
-    image: "bg-gradient-to-br from-red-500 to-purple-600",
+    image: Cybersecurity,
     weeks: 8,
     students: 890,
     rating: 4.8,
@@ -126,7 +139,7 @@ export const CoursesData = [
     title: "Advanced JavaScript Programming",
     category: "web",
     level: "advanced",
-    image: "bg-gradient-to-br from-yellow-500 to-orange-600",
+    image: Advanced,
     weeks: 6,
     students: 1050,
     rating: 4.9,
@@ -139,7 +152,7 @@ export const CoursesData = [
     title: "UI/UX Design for Developers",
     category: "web",
     level: "beginner",
-    image: "bg-gradient-to-br from-pink-500 to-purple-600",
+    image: Design,
     weeks: 7,
     students: 830,
     rating: 4.7,
@@ -152,7 +165,7 @@ export const CoursesData = [
     title: "Blockchain Development",
     category: "web",
     level: "advanced",
-    image: "bg-gradient-to-br from-indigo-500 to-blue-600",
+    image: Blockchain,
     weeks: 10,
     students: 580,
     rating: 4.6,
@@ -173,15 +186,6 @@ export const CoursesData = [
     description:
       "Master data manipulation, visualization, and analysis using Python, Pandas, NumPy, and Matplotlib.",
   },
-];
-
-export const Specialties = [
-  { id: "all", name: "All Specialties" },
-  { id: "web", name: "Web Development" },
-  { id: "data", name: "Data Science" },
-  { id: "mobile", name: "Mobile Development" },
-  { id: "cloud", name: "Cloud Computing" },
-  { id: "security", name: "Cybersecurity" },
 ];
 
 export const MentorsData = [

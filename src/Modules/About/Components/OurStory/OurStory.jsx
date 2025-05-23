@@ -23,8 +23,8 @@ export const OurStory = () => {
               </div>
             </div>
 
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-100 dark:bg-purple-900/30 rounded-2xl -z-10"></div>
-            <div className="absolute -top-6 -left-6 w-24 h-24 bg-blue-100 dark:bg-blue-900/30 rounded-full -z-10"></div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-100 rounded-2xl -z-10"></div>
+            <div className="absolute -top-6 -left-6 w-24 h-24 bg-blue-100 rounded-full -z-10"></div>
           </motion.div>
 
           <motion.div
@@ -33,10 +33,10 @@ export const OurStory = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">
               Our Story
             </h2>
-            <div className="space-y-4 text-slate-600 dark:text-slate-400">
+            <div className="space-y-4 text-slate-600">
               <p>
                 IT Academy was founded in 2015 by a group of tech industry
                 veterans who recognized a significant gap between traditional

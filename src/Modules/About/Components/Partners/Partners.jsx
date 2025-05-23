@@ -22,12 +22,10 @@ export const Partners = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md dark:shadow-slate-800/50 border border-slate-100 dark:border-slate-700 flex items-center justify-center"
+              className="bg-white rounded-xl p-6 shadow-md border border-slate-100 flex items-center justify-center"
             >
-              <div className="h-12 w-full bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center">
-                <span className="text-slate-400 dark:text-slate-500 font-medium">
-                  Partner Logo
-                </span>
+              <div className="h-12 w-full bg-slate-200 rounded flex items-center justify-center">
+                <span className="text-slate-400 font-medium">Partner Logo</span>
               </div>
             </motion.div>
           ))}

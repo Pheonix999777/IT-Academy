@@ -24,11 +24,11 @@ export const Team = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
-              className="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg dark:shadow-slate-800/50 border border-slate-100 dark:border-slate-700"
+              className="bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100"
             >
               <div className={`h-32 ${member.image} relative`}>
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
-                  <div className="w-20 h-20 rounded-full border-4 border-white dark:border-slate-800 flex items-center justify-center text-white font-bold text-xl">
+                  <div className="w-20 h-20 rounded-full border-4 border-white flex items-center justify-center text-white font-bold text-xl">
                     {member.name
                       .split(" ")
                       .map((n) => n[0])
@@ -39,16 +39,12 @@ export const Team = () => {
 
               <div className="pt-12 p-6">
                 <div className="text-center mb-4">
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                  <h3 className="text-xl font-bold text-slate-900">
                     {member.name}
                   </h3>
-                  <p className="text-purple-600 dark:text-purple-400">
-                    {member.title}
-                  </p>
+                  <p className="text-purple-600">{member.title}</p>
                 </div>
-                <p className="text-slate-600 dark:text-slate-400 text-sm">
-                  {member.bio}
-                </p>
+                <p className="text-slate-600 text-sm">{member.bio}</p>
               </div>
             </motion.div>
           ))}

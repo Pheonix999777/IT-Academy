@@ -1,10 +1,16 @@
+import { Link } from "react-router-dom";
 import { FiGithub, FiTwitter, FiLinkedin, FiInstagram } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { NavLinks } from "/src/data/data.jsx";
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <motion.footer
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="bg-white border-t border-slate-200"
+    >
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
@@ -19,7 +25,7 @@ const Footer = () => {
                 Academy
               </span>
             </div>
-            <p className="mt-4 text-sm text-slate-600 dark:text-slate-400 max-w-md">
+            <p className="mt-4 text-sm text-slate-600 max-w-md">
               Empowering the next generation of tech professionals with
               cutting-edge courses, expert mentorship, and a supportive learning
               community.
@@ -27,29 +33,41 @@ const Footer = () => {
             <div className="mt-6 flex space-x-4">
               <motion.a
                 whileHover={{ y: -3 }}
-                href="#"
-                className="text-slate-500 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400"
+                href="https://github.com/your-profile"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="text-slate-500 hover:text-purple-600"
               >
                 <FiGithub className="h-5 w-5" />
               </motion.a>
               <motion.a
                 whileHover={{ y: -3 }}
-                href="#"
-                className="text-slate-500 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400"
+                href="https://twitter.com/your-profile"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                className="text-slate-500 hover:text-purple-600"
               >
                 <FiTwitter className="h-5 w-5" />
               </motion.a>
               <motion.a
                 whileHover={{ y: -3 }}
-                href="#"
-                className="text-slate-500 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400"
+                href="https://linkedin.com/in/your-profile"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-slate-500 hover:text-purple-600"
               >
                 <FiLinkedin className="h-5 w-5" />
               </motion.a>
               <motion.a
                 whileHover={{ y: -3 }}
-                href="#"
-                className="text-slate-500 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400"
+                href="https://instagram.com/your-profile"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-slate-500 hover:text-purple-600"
               >
                 <FiInstagram className="h-5 w-5" />
               </motion.a>
@@ -57,48 +75,58 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-slate-800 dark:text-slate-200 tracking-wider uppercase">
+            <h3 className="text-sm font-semibold text-slate-800 tracking-wider uppercase">
               Quick Links
             </h3>
             <ul className="mt-4 space-y-2">
               {NavLinks.map((item, index) => (
                 <li key={index}>
-                  <a
-                    href={item.path}
-                    className="text-sm text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400"
+                  <Link
+                    to={item.path}
+                    className="text-sm text-slate-600 hover:text-purple-600"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-slate-800 dark:text-slate-200 tracking-wider uppercase">
+            <h3 className="text-sm font-semibold text-slate-800 tracking-wider uppercase">
               Contact Us
             </h3>
             <ul className="mt-4 space-y-2">
-              <li className="text-sm text-slate-600 dark:text-slate-400">
+              <li className="text-sm text-slate-600">
                 123 Tech Street, Digital City
               </li>
-              <li className="text-sm text-slate-600 dark:text-slate-400">
-                contact@itacademy.com
+              <li>
+                <a
+                  href="mailto:contact@itacademy.com"
+                  className="text-sm text-slate-600 hover:text-purple-600"
+                >
+                  contact@itacademy.com
+                </a>
               </li>
-              <li className="text-sm text-slate-600 dark:text-slate-400">
-                +1 (555) 123-4567
+              <li>
+                <a
+                  href="tel:+15551234567"
+                  className="text-sm text-slate-600 hover:text-purple-600"
+                >
+                  +1 (555) 123-4567
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-slate-200 dark:border-slate-800 pt-8">
-          <p className="text-sm text-center text-slate-500 dark:text-slate-400">
+        <div className="mt-12 border-t border-slate-200 pt-8">
+          <p className="text-sm text-center text-slate-500">
             &copy; {new Date().getFullYear()} IT Academy. All rights reserved.
           </p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

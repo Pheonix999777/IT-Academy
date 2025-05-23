@@ -92,44 +92,42 @@ const CourseModal = ({ course, isOpen, onClose }) => {
               </div>
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 p-2 rounded-full bg-white/90 dark:bg-slate-900/90 text-slate-700 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-900 transition-colors"
+                className="absolute top-4 right-4 p-2 rounded-full bg-white/90 text-slate-700  hover:bg-white transition-colors"
                 aria-label="Close modal"
               >
                 <FiX className="h-5 w-5" />
               </button>
-              <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm rounded-lg px-3 py-1 text-sm font-medium text-slate-900 dark:text-white">
+              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1 text-sm font-medium text-slate-900">
                 {course.category}
               </div>
-              <div className="absolute bottom-4 right-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm rounded-lg px-3 py-1 text-sm font-medium text-slate-900 dark:text-white flex items-center">
+              <div className="absolute bottom-4 right-4 bg-white/90  backdrop-blur-sm rounded-lg px-3 py-1 text-sm font-medium text-slate-900  flex items-center">
                 <span className="text-yellow-500 mr-1">★</span> {course.rating}
               </div>
             </div>
 
             {/* Content */}
             <div className="p-6 md:p-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
                 {course.title}
               </h2>
 
               <div className="flex flex-wrap gap-3 mb-6">
-                <span className="inline-flex items-center text-sm font-medium px-2.5 py-0.5 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300">
+                <span className="inline-flex items-center text-sm font-medium px-2.5 py-0.5 rounded-full bg-purple-100  text-purple-800">
                   {course.level}
                 </span>
-                <span className="inline-flex items-center text-sm font-medium px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300">
+                <span className="inline-flex items-center text-sm font-medium px-2.5 py-0.5 rounded-full bg-blue-100  text-blue-800">
                   <FiClock className="mr-1 h-3 w-3" />
                   {course.weeks} weeks
                 </span>
-                <span className="inline-flex items-center text-sm font-medium px-2.5 py-0.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300">
+                <span className="inline-flex items-center text-sm font-medium px-2.5 py-0.5 rounded-full bg-green-100  text-green-800">
                   <FiUsers className="mr-1 h-3 w-3" />
                   {course.students?.toLocaleString()} students
                 </span>
               </div>
 
               <div className="prose dark:prose-invert max-w-none mb-8">
-                <p className="text-slate-600 dark:text-slate-400 text-lg">
-                  {course.description}
-                </p>
-                <p className="text-slate-600 dark:text-slate-400">
+                <p className="text-slate-600 text-lg">{course.description}</p>
+                <p className="text-slate-600">
                   This comprehensive course will take you from beginner to
                   professional, with hands-on projects and personalized feedback
                   from industry experts. You'll build a portfolio of work that
@@ -139,25 +137,25 @@ const CourseModal = ({ course, isOpen, onClose }) => {
 
               {/* Curriculum */}
               <div className="mb-8">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
+                <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center">
                   <FiCalendar className="mr-2" /> Course Curriculum
                 </h3>
                 <div className="space-y-4">
                   {curriculum.map((week) => (
                     <div
                       key={week.week}
-                      className="bg-slate-50 dark:bg-slate-700/30 rounded-lg p-4 border border-slate-200 dark:border-slate-700"
+                      className="bg-slate-50 rounded-lg p-4 border border-slate-20"
                     >
-                      <h4 className="font-medium text-slate-900 dark:text-white mb-2">
+                      <h4 className="font-medium text-slate-90 mb-2">
                         Week {week.week}: {week.title}
                       </h4>
                       <ul className="space-y-1">
                         {week.topics.map((topic, i) => (
                           <li
                             key={i}
-                            className="flex items-start text-slate-600 dark:text-slate-400"
+                            className="flex items-start text-slate-600"
                           >
-                            <FiCheckCircle className="h-4 w-4 text-green-500 dark:text-green-400 mt-0.5 mr-2 flex-shrink-0" />
+                            <FiCheckCircle className="h-4 w-4 text-green-500  mt-0.5 mr-2 flex-shrink-0" />
                             <span>{topic}</span>
                           </li>
                         ))}
@@ -169,16 +167,13 @@ const CourseModal = ({ course, isOpen, onClose }) => {
 
               {/* Requirements */}
               <div className="mb-8">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
+                <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center">
                   <FiAward className="mr-2" /> Requirements
                 </h3>
                 <ul className="space-y-2">
                   {requirements.map((req, i) => (
-                    <li
-                      key={i}
-                      className="flex items-start text-slate-600 dark:text-slate-400"
-                    >
-                      <FiCheckCircle className="h-4 w-4 text-green-500 dark:text-green-400 mt-0.5 mr-2 flex-shrink-0" />
+                    <li key={i} className="flex items-start text-slate-600">
+                      <FiCheckCircle className="h-4 w-4 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
                       <span>{req}</span>
                     </li>
                   ))}
@@ -186,17 +181,17 @@ const CourseModal = ({ course, isOpen, onClose }) => {
               </div>
 
               {/* Price and CTA */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-slate-200 dark:border-slate-700">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-slate-200">
                 <div>
-                  <span className="block text-sm text-slate-500 dark:text-slate-400">
+                  <span className="block text-sm text-slate-500">
                     Course Price
                   </span>
-                  <span className="text-3xl font-bold text-slate-900 dark:text-white">
+                  <span className="text-3xl font-bold text-slate-900">
                     ${course.price}
                   </span>
                 </div>
                 <div className="flex gap-3">
-                  <button className="px-6 py-3 rounded-lg bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 font-medium hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">
+                  <button className="px-6 py-3 rounded-lg bg-slate-200 text-slate-800  font-medium hover:bg-slate-300 transition-colors">
                     Add to Wishlist
                   </button>
                   <button className="px-6 py-3 rounded-lg bg-purple-600 text-white font-medium hover:bg-purple-700 transition-colors">

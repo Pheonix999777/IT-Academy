@@ -101,39 +101,45 @@ const MentorCarousel = ({ mentors }) => {
                 exit="exit"
                 className="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-2"
               >
-                <div className="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg dark:shadow-slate-800/50 border border-slate-100 dark:border-slate-700 h-full">
+                <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100 h-full">
                   <div className={`h-48 ${mentor.image} relative`}>
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                    <div className="absolute inset-0 bg-black/20 transition-colors"></div>
                   </div>
 
                   <div className="p-6">
                     <div className="flex flex-col items-center text-center">
-                      <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">
+                      <h3 className="text-xl font-bold text-slate-900 mb-1">
                         {mentor.name}
                       </h3>
-                      <p className="text-purple-600 dark:text-purple-400 font-medium mb-1">
+                      <p className="text-purple-600 font-medium mb-1">
                         {mentor.title}
                       </p>
-                      <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                      <p className="text-sm text-slate-600 mb-3">
                         {mentor.company}
                       </p>
 
                       <div className="flex space-x-3 mb-4">
                         <a
                           href={mentor.social?.linkedin || "#"}
-                          className="text-slate-500 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400 transition-colors"
+                          className="text-slate-500 hover:text-purple-600 transition-colors"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <FiLinkedin className="h-5 w-5" />
                         </a>
                         <a
                           href={mentor.social?.twitter || "#"}
-                          className="text-slate-500 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400 transition-colors"
+                          className="text-slate-500 hover:text-purple-600 transition-colors"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <FiTwitter className="h-5 w-5" />
                         </a>
                         <a
                           href={mentor.social?.github || "#"}
-                          className="text-slate-500 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400 transition-colors"
+                          className="text-slate-500 hover:text-purple-600 transition-colors"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <FiGithub className="h-5 w-5" />
                         </a>
@@ -150,14 +156,14 @@ const MentorCarousel = ({ mentors }) => {
       {/* Navigation arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white dark:bg-slate-800 rounded-full p-2 shadow-lg text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 focus:outline-none z-10"
+        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full p-2 shadow-lg text-slate-700 hover:text-purple-600 focus:outline-none z-10"
         aria-label="Previous slide"
       >
         <FiChevronLeft className="h-6 w-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white dark:bg-slate-800 rounded-full p-2 shadow-lg text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 focus:outline-none z-10"
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white rounded-full p-2 shadow-lg text-slate-700 hover:text-purple-600 focus:outline-none z-10"
         aria-label="Next slide"
       >
         <FiChevronRight className="h-6 w-6" />
@@ -175,8 +181,8 @@ const MentorCarousel = ({ mentors }) => {
               }}
               className={`h-2 rounded-full transition-all ${
                 currentIndex === index
-                  ? "w-6 bg-purple-600 dark:bg-purple-400"
-                  : "w-2 bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 dark:hover:bg-slate-500"
+                  ? "w-6 bg-purple-600"
+                  : "w-2 bg-slate-300 hover:bg-slate-400"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

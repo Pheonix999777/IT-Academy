@@ -5,7 +5,7 @@ import { Faq } from "./Components/Faq/Faq";
 
 const Contact = () => {
   return (
-    <div className="bg-slate-50 dark:bg-slate-900 min-h-screen">
+    <div className="bg-slate-50 min-h-screen">
       <SectionHeader
         title={"Contact Us"}
         text={
