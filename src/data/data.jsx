@@ -7,6 +7,7 @@ import Cybersecurity from "/src/assets/Images/Cybersecurity Fundamentals.png";
 import Advanced from "/src/assets/Images/Advanced JavaScript Programming.png";
 import Design from "/src/assets/Images/UIUX Design for Developers.png";
 import Blockchain from "/src/assets/Images/Blockchain Development.png";
+import Python from "/src/assets/Images/Python for Data Analysis.png";
 
 export const NavLinks = [
   { name: "Home", path: "/" },
@@ -178,7 +179,7 @@ export const CoursesData = [
     title: "Python for Data Analysis",
     category: "data",
     level: "intermediate",
-    image: "bg-gradient-to-br from-blue-500 to-cyan-600",
+    image: Python,
     weeks: 8,
     students: 920,
     rating: 4.8,
